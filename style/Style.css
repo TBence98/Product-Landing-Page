@@ -1,0 +1,393 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #afafaf;
+    font-family: "roboto", sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+input {
+    font-size: inherit;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+header {
+    background: linear-gradient(rgb(235 235 235 / 20%), rgba(0, 0, 0, 0.7)),
+        url(../images/hero.jpg) center/cover;
+}
+
+.nav-center {
+    display: flex;
+    max-width: 73rem;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.fixed-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    transition: all 0.3s linear;
+}
+
+.fixed-header .nav-link:hover {
+    color: hsla(182, 63%, 54%);
+}
+
+#logo {
+    font-family: "Lobster", sans-serif;
+    letter-spacing: 0.05rem;
+    line-height: 5rem;
+}
+
+#nav-bar {
+    transition: background-color 0.3s linear, height 0.3s linear;
+    color: white;
+}
+
+.nav-toggle {
+    display: none;
+    background-color: transparent;
+    border: none;
+}
+
+#nav-bar ul li {
+    display: inline-block;
+}
+
+.nav-link {
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.25rem;
+    text-decoration: none;
+    height: 5rem;
+    line-height: 5rem;
+    display: block;
+    padding: 0 1rem;
+    color: inherit;
+    transition: color 0.3s ease-in-out 0s;
+}
+
+.nav-link:hover {
+    color: black;
+}
+
+#title {
+    margin: 0 auto 0.8rem auto;
+    font-size: 4rem;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.25rem;
+}
+
+@media (max-width: 1035px) {
+    .nav-link {
+        font-size: 1.1rem;
+    }
+
+    #logo {
+        font-size: 1.6rem;
+    }
+
+    #title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .header {
+        background-color: white;
+    }
+
+    .nav-center {
+        display: block;
+    }
+
+    .nav-header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .header {
+        padding: 1rem 1.5rem;
+    }
+
+    #logo {
+        line-height: 1;
+    }
+
+    #nav-bar {
+        height: 0;
+        overflow: hidden;
+    }
+
+    #nav-bar ul li {
+        display: block;
+    }
+
+    #nav-links {
+        padding-top: 1rem;
+    }
+
+    .nav-link {
+        color: black !important;
+        padding: 0.75rem 0;
+        height: auto;
+        line-height: 1;
+    }
+
+    #title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 488px) {
+    #nav-bar {
+        margin-right: 0;
+    }
+
+    #header-img {
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+
+    #nav-bar ul li {
+        display: block;
+    }
+}
+
+.banner {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+}
+
+.banner-container {
+    padding-bottom: 4rem;
+}
+
+#email {
+    display: block;
+    margin: 0 auto;
+    padding: 0.3rem;
+    width: 22rem;
+}
+
+#submit {
+    cursor: pointer;
+    display: block;
+    margin: 1.3rem auto;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    font-size: 0.875rem;
+    letter-spacing: 0.25rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s linear;
+}
+
+#submit:hover {
+    background-color: white;
+    color: hsla(182, 63%, 54%);
+}
+
+#features-container {
+    background-color: rgb(56, 56, 56);
+}
+
+#features {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 4rem 0;
+    color: white;
+}
+
+.feature-box {
+    display: flex;
+    margin: 3rem 0;
+}
+
+.feature-box img {
+    width: 4rem;
+    margin: auto 8% auto 0;
+}
+
+.feature-box .description {
+    letter-spacing: 0.05rem;
+}
+
+.feature-box h2 {
+    margin-bottom: 1rem;
+    color: #baff39;
+}
+
+.feature-box p {
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 1000px) {
+    .feature-box img {
+        margin-left: 3%;
+    }
+
+    .product-box h3 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .feature-box img {
+        display: none;
+    }
+    .description {
+        text-align: center;
+    }
+
+    #email {
+        width: 17rem;
+    }
+}
+
+#how-it-works {
+    background-color: #6e6e6e;
+    display: flex;
+    justify-content: center;
+    padding: 6rem 0;
+    margin-bottom: 5rem;
+}
+
+#how-it-works iframe {
+    max-width: 45rem;
+    width: 100%;
+    height: 25rem;
+}
+
+#pricing {
+    display: flex;
+    max-width: 67rem;
+    margin: 0 auto;
+}
+
+.product-box {
+    border: 1px solid rgba(0, 0, 0, 0.9);
+    width: calc(100% / 3);
+    margin: 0 0.8rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: rgb(56, 56, 56);
+    color: white;
+}
+
+@media (max-width: 650px) {
+    #pricing {
+        flex-flow: column;
+        align-items: center;
+    }
+    .product-box {
+        width: 20rem;
+        margin: 0.5rem 0;
+    }
+
+    #how-it-works iframe {
+        height: 18rem;
+    }
+}
+
+.product-box h3 {
+    padding: 1rem 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.05rem;
+    color: #baff39;
+}
+
+.product-box b {
+    display: block;
+    font-size: 1.7rem;
+    margin: 0.7rem 0;
+}
+
+.product-box p {
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+.product-box form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 1.5rem auto;
+}
+
+.select-btn {
+    padding: 0.4rem 1.3rem;
+    background-color: #baff39;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    margin-top: 5rem;
+    background-color: rgb(56, 56, 56);
+    color: white;
+}
+
+#footer-menu {
+    padding-top: 1rem;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+#footer-menu a {
+    padding: 1rem;
+    text-decoration: none;
+    color: white;
+}
+
+footer p {
+    margin-top: 0.5rem;
+    padding-bottom: 0.6rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 0.05rem;
+    text-align: center;
+}
+
+@media screen and (min-width: 2300px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 3200px) {
+    html {
+        font-size: 32px;
+    }
+}
