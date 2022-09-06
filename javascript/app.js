@@ -36,10 +36,20 @@ navLinks.forEach((element) => {
         const id = e.currentTarget.getAttribute("href");
         const target = document.querySelector(id);
         const navHeight = nav.getBoundingClientRect().height;
+        // offsetTop in this case is the distance between the target
+        // top outer border and the inner border of the top of the
+        // html element
         let targetPosition = target.offsetTop - navHeight;
+        // This check is important because, if the browser starts
+        // scrolling the nav become fixed, so it's not part of the
+        // document normal flow. That's why we need to subtract
+        // the navHeight again to get the correct distance
         if (!nav.classList.contains("fixed-header")) {
             targetPosition -= navHeight;
         }
+        // if the nav bar is open in smaller screens we have to add
+        // it's height to the targetPosition because it will be
+        // closed automatically when you click to the link
         if (navHeight > 80) {
             targetPosition += document
                 .getElementById("nav-links")
